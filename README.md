@@ -2,9 +2,13 @@
 
 ## Models
 
-## 1. MobileNet V2
+## 1. MobileNetV2
 ### Result
 <img src="assets/mobilenet_v2_result.png">
+
+## 2. MobileNetV3 Small
+### Result
+<img src="assets/mobilenet_v3_small_result.png">
 
 
 ## Saved Models
