@@ -1,0 +1,4 @@
+model = ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8
+
+/content/training_demo/models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8
+/content/training_demo/models/ssd_mobilenet_v2_fpnlite_640x640_coco17_tpu-8/pipeline.config
