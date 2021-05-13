@@ -14,7 +14,7 @@ function App() {
   // Main function
   const runCoco = async () => {
     // 3. TODO - Load network 
-    const net = await tf.loadGraphModel('https://directionstfod.s3.au-syd.cloud-object-storage.appdomain.cloud/model.json')
+    const net = await tf.loadGraphModel('https://sayantfod.s3.jp-tok.cloud-object-storage.appdomain.cloud/model.json')
     
     // Loop and detect hands
     setInterval(() => {
@@ -50,8 +50,8 @@ function App() {
       const obj = await net.executeAsync(expanded)
       //TODO: Timestamp 4:41:27  Link -  https://youtu.be/yqkISICHH-U
       console.log(await obj[3].array())
-      const boxes = await obj[4].array() //From 0 to 1
-      const classes = await obj[5].array() //Classes Name 2 here 7
+      const boxes = await obj[7].array() //From 0 to 1
+      const classes = await obj[2].array() //Classes Name 2 here 7
       const scores = await obj[4].array() // 7 in Video
     
       // Draw mesh
