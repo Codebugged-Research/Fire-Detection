@@ -50,11 +50,12 @@ function App() {
       const casted = resized.cast("int32");
       const expanded = casted.expandDims(0);
       const obj = await net.executeAsync(expanded);
-      //TODO: Timestamp 4:41:27  Link -  https://youtu.be/yqkISICHH-U
-      console.log(await obj[3].array());
-      const boxes = await obj[7].array(); //From 0 to 1
-      const classes = await obj[2].array(); //Classes Name 2 here 7
-      const scores = await obj[4].array(); // 7 in Video
+
+      console.log(await obj[1].array());
+
+      const boxes = await obj[3].array(); //
+      const classes = await obj[5].array(); //Classes  
+      const scores = await obj[1].array(); // 
 
       // Draw mesh
       const ctx = canvasRef.current.getContext("2d");
@@ -66,7 +67,7 @@ function App() {
           boxes[0],
           classes[0],
           scores[0],
-          0.6,
+          0.3,
           videoWidth,
           videoHeight,
           ctx
