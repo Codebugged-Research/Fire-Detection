@@ -1,10 +1,8 @@
 // Import dependencies
-// eslint-disable-next-line
 import React, { useRef, useState, useEffect } from "react";
 import * as tf from "@tensorflow/tfjs";
 import Webcam from "react-webcam";
 import "./App.css";
-// eslint-disable-next-line
 import { nextFrame } from "@tensorflow/tfjs";
 // 2. TODO - Import drawing utility here
 import { drawRect } from "./utilities";
@@ -83,9 +81,7 @@ function App() {
     }
   };
   // eslint-disable-next-line
-  useEffect(() => {
-    runCoco();
-  }, []);
+  useEffect(()=>{runCoco()},[]);
 
   return (
     <div className="App">
