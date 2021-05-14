@@ -51,10 +51,8 @@ function App() {
       const expanded = casted.expandDims(0);
       const obj = await net.executeAsync(expanded);
 
-      console.log(await obj[1].array());
-
       const boxes = await obj[3].array(); //
-      const classes = await obj[5].array(); //Classes  
+      const classes = await obj[0].array(); //Classes  
       const scores = await obj[1].array(); // 
 
       // Draw mesh
@@ -67,7 +65,7 @@ function App() {
           boxes[0],
           classes[0],
           scores[0],
-          0.3,
+          0.4,
           videoWidth,
           videoHeight,
           ctx
@@ -79,6 +77,8 @@ function App() {
       tf.dispose(casted);
       tf.dispose(expanded);
       tf.dispose(obj);
+    }else{
+      console.log("cam error")
     }
   };
   // eslint-disable-next-line
